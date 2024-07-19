@@ -1,0 +1,43 @@
+.total {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+}
+
+.one {
+  position: relative;
+  width: 100%; /* Full width on small screens */
+  max-width: 600px; /* Max width to prevent it from getting too wide */
+  margin: 10px; /* Add margin for spacing between items */
+}
+
+h1 {
+  text-align: center;
+}
+
+.one p {
+  position: relative;
+  width: 100%; /* Full width */
+  padding: 30px;
+  font-size: 18px; /* Slightly smaller font size for better readability on small screens */
+  text-align: justify;
+  box-sizing: border-box; /* Ensure padding is included in width calculations */
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+  .one {
+    width: 48%; /* Adjust width for medium-sized screens to be side by side */
+    max-width: none; /* Remove max-width for side by side layout */
+  }
+  
+  .one p {
+    font-size: 20px; /* Increase font size for better readability on larger screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .one {
+    width: 30%; /* Adjust width for larger screens */
+  }
+}

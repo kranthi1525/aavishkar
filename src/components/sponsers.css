@@ -1,0 +1,138 @@
+
+.container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 50px;
+}
+
+.sponsor-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+.prize-container{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 80px;
+    margin-top: 30px;
+}
+
+.prize-card, .sponsor {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.prize-card {
+    width: 280px;
+    text-align: center;
+}
+
+.prize-card h2 {
+    color: #8BC34A;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.prize-icon {
+    font-size: 3em;
+    margin: 20px 0;
+    color: #4CAF50;
+}
+
+.prize-amount {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #FFD700;
+    margin: 10px 0;
+}
+
+.prize-description {
+    font-style: italic;
+    color: #BDBDBD;
+    margin-bottom: 10px;
+}
+
+.prize-details {
+    font-size: 0.9em;
+    color: #e0e0e0;
+}
+
+#first {
+    border: 2px solid #FFD700;
+}
+
+#second {
+    border: 2px solid #C0C0C0;
+}
+
+#third {
+    border: 2px solid #CD7F32;
+}
+
+.prize-card:hover, .sponsor:hover {
+    box-shadow: 0 10px 20px rgba(76, 175, 80, 0.3);
+    transform: translateY(-5px);
+}
+
+.sponsor {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+}
+
+.sponsor img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    transition: all 0.3s ease;
+}
+
+.sponsor:hover img {
+    transform: scale(1.1);
+}
+
+.sponsor::after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(76, 175, 80, 0.9);
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+}
+
+.sponsor:hover::after {
+    transform: translateY(0);
+}

@@ -1,0 +1,313 @@
+:root {
+  --neon-green: rgba(57, 255, 20, 0.7);
+  --dark-bg: #001a1a;
+  --light-green: #aff1b6;
+  --content-width: calc(40vw - 84px);
+  --margin: 20px;
+  --spacing: 20px;
+  --bdrs: 6px;
+  --circle-size: 40px;
+  --icon-size: 32px;
+  --bdrs-icon: 100%;
+  --line-size: 2px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--light-green);
+  background-image: url('https://source.unsplash.com/random/1920x1080?nature');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h2 {
+  margin: 5%;
+  text-align: center;
+  font-size: 7rem;
+  font-weight: 100;
+  color: white;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  margin: var(--margin) auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* .timeline::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+} */
+
+.timeline__event {
+  margin-bottom: var(--spacing);
+  position: relative;
+  display: flex;
+  margin: var(--spacing) 0;
+  border-radius: var(--bdrs);
+  align-self: center;
+  width: 50vw;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease;
+}
+
+.timeline__event:hover {
+  transform: translateY(-5px);
+}
+
+.timeline__event.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline__event:nth-child(2n + 1) {
+  flex-direction: row-reverse;
+}
+
+.timeline__event__title {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--neon-green);
+  letter-spacing: 1.5px;
+  transition: color 0.3s ease;
+}
+
+.timeline__event__content {
+  padding: var(--spacing);
+  background: rgba(0, 26, 26, 0.8);
+  width: var(--content-width);
+  border-radius: 0 var(--bdrs) var(--bdrs) 0;
+  border: 1px solid var(--neon-green);
+  transition: all 0.3s ease;
+}
+
+.timeline__event:hover .timeline__event__content {
+  background: rgba(0, 26, 26, 0.95);
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+  scale: 1.03;
+}
+
+.timeline__event:nth-child(2n + 1) .timeline__event__content {
+  border-radius: var(--bdrs) 0 0 var(--bdrs);
+}
+
+.timeline__event__date {
+  color: var(--dark-bg);
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: var(--neon-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 0 var(--spacing);
+  border-radius: var(--bdrs) 0 0 var(--bdrs);
+  transition: all 0.3s ease;
+}
+
+.timeline__event:hover .timeline__event__date {
+  background: rgba(57, 255, 20, 0.9);
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
+  scale: 1.03;
+}
+
+.timeline__event:nth-child(2n + 1) .timeline__event__date {
+  border-radius: 0 var(--bdrs) var(--bdrs) 0;
+}
+
+.timeline__event__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-bg);
+  padding: var(--spacing);
+  align-self: center;
+  margin: 0 var(--spacing);
+  background: var(--neon-green);
+  border-radius: var(--bdrs-icon);
+  width: var(--circle-size);
+  padding: 40px;
+  height: var(--circle-size);
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+.icon{
+  scale: 2;
+}
+
+.timeline__event:hover .timeline__event__icon {
+  background: rgba(57, 255, 20, 0.9);
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
+  
+}
+
+.timeline__event__icon i {
+  font-size: var(--icon-size);
+}
+
+.timeline__event__icon::before,
+.timeline__event__icon::after {
+  content: "";
+  position: absolute;
+  background: var(--neon-green);
+  z-index: -1;
+  transform-origin: center top;
+  transition: transform 1s ease-out;
+}
+
+.timeline__event__icon::before {
+  width: var(--line-size);
+  height: calc(100% + var(--spacing) + 40px);
+  top: var(--circle-size);
+  left: 50%;
+  transform: translateX(-50%) scaleY(0);
+}
+
+.timeline__event__icon::after {
+  width: calc(50% + var(--spacing) + 20px);
+  height: var(--line-size);
+  top: 50%;
+  right: calc(-1 * var(--spacing) - 20px);
+  transform: scaleX(0);
+}
+
+.timeline__event:last-child .timeline__event__icon::before,
+.timeline__event:last-child .timeline__event__icon::after {
+  display: none;
+}
+
+.timeline__event:nth-child(2n + 1) .timeline__event__icon::after {
+  left: calc(-1 * var(--spacing) - 20px);
+  right: auto;
+  transform-origin: left center;
+}
+
+.timeline__event.animate-lines .timeline__event__icon::before {
+  transform: translateX(-50%) scaleY(1.2);
+}
+
+.timeline__event.animate-lines .timeline__event__icon::after {
+  transform: scaleX(1);
+}
+
+.timeline__event__description {
+  flex-basis: 60%;
+}
+
+.desc {
+  line-height: 29px;
+  font-size: larger;
+  transition: color 0.3s ease;
+}
+
+.timeline__event:hover .timeline__event__title {
+  color: #4dff4d;
+}
+
+.timeline__event:hover .desc {
+  color: #ccffcc;
+}
+
+@media (max-width: 786px) {
+  .timeline__event {
+    flex-direction: column;
+    align-self: flex-start;
+    width: 100%;
+    padding-left: 30px;
+    margin-left: 20px;
+  }
+  .timeline__event.animate-lines .timeline__event__icon::before {
+    transform: translateX(-50%) scaleY(2);
+  }
+  .timeline__event:nth-child(2n + 1) {
+    flex-direction: column;
+  }
+
+  .timeline__event__content {
+    width: calc(100% - 40px);
+    border-radius: var(--bdrs);
+  }
+
+  .timeline__event__icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(-50%);
+    margin-left: 0;
+  }
+
+  .timeline__event__date {
+    position: absolute;
+    top: -40px;
+    left: 70px;
+    border-radius: var(--bdrs);
+    width: fit-content;
+    padding: 5px 10px;
+    background: var(--neon-green);
+    color: var(--dark-bg);
+  }
+  
+  .timeline__event:nth-child(2n + 1) .timeline__event__date {
+    border-radius: var(--bdrs);
+  }
+
+  .timeline__event__icon::before {
+    height: calc(100% + 40px);
+    top: 50px;
+  }
+
+  .timeline__event__icon::after {
+    width: 40px;
+    left: 50px;
+  }
+
+  .timeline__event:nth-child(2n + 1) .timeline__event__icon::after {
+    left: 50px;
+  }
+
+  .timeline__event:last-child .timeline__event__icon::before {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .timeline__event.animate-lines .timeline__event__icon::before {
+    transform: translateX(-50%) scaleY(4);
+  }
+}
+
+@media (max-width: 1024px) {
+  .timeline__event.animate-lines .timeline__event__icon::before {
+    transform: translateX(-50%) scaleY(2.3);
+  }
+}
+
+
+
+
+
+
+
