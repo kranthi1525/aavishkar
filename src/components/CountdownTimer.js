@@ -4,7 +4,7 @@ export default function CountdownTimer() {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   function calculateTimeLeft() {
-    const targetDate = new Date("2024-12-01T00:00:00").getTime();
+    const targetDate = new Date("2024-09-30T00:00:00").getTime();
     const now = new Date().getTime();
     const difference = targetDate - now;
 

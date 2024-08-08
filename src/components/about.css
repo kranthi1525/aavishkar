@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Center items horizontally */
+  font-family: "Jost", sans-serif;
 }
 
 .one {
@@ -22,6 +23,7 @@ h1 {
   font-size: 18px; /* Slightly smaller font size for better readability on small screens */
   text-align: justify;
   box-sizing: border-box; /* Ensure padding is included in width calculations */
+  font-family: "Jost", sans-serif;
 }
 
 /* Media queries for responsiveness */

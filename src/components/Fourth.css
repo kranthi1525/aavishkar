@@ -10,14 +10,14 @@
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
-    font-family: 'Arial', sans-serif;
+    font-family: "Jost", sans-serif;
 }
 
 .team-heading1 {
     text-align: center;
     font-size: 2.5rem;
     margin: 2rem 0;
-    color: var(--text-accent);
+    /* color: var(--text-accent); */
 }
 
 .expert-grid1 {

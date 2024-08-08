@@ -3,20 +3,26 @@
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+    
 }
 
 h1, h2 {
     text-align: center;
     color: #4CAF50;
     font-size: 2.5em;
+    margin-top: 50px;
     margin-bottom: 30px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     letter-spacing: 1px;
+    font-family: "Jost", sans-serif;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 3em;
+    font-weight: 400;
     margin-top: 50px;
+    font-family: "Jost", sans-serif;
 }
 
 .sponsor-container {
@@ -25,6 +31,7 @@ h2 {
     align-items: stretch;
     flex-wrap: wrap;
     gap: 30px;
+    font-family: "Jost", sans-serif;
     margin-top: 30px;
 }
 .prize-container{
@@ -34,6 +41,7 @@ h2 {
     flex-wrap: wrap;
     gap: 80px;
     margin-top: 30px;
+    font-family: "Jost", sans-serif;
 }
 
 .prize-card, .sponsor {

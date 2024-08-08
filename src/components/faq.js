@@ -52,7 +52,7 @@ const Accordion = () => {
 
     return (
         <section className="faq">
-            <h2>Frequently Asked Questions</h2>
+            <h1>Frequently Asked Questions</h1>
             <div className="accordion">
                 {faqData.map((item, index) => (
                     <AccordionItem

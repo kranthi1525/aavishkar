@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./home.css";
+import gfg from './images/gfg.png';
+
 
 const Home = () => {
   const headings = [
@@ -78,16 +80,27 @@ const Home = () => {
           </nav>
         </header>
         <main className="hero">
+          <div className="logo22">
+          
+          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI0ZAqeOMxbsFy1qNsVCV0B4Bv3T2M94fG2A&s"alt="" className="logo2" />
+
+          </div>
+          <div>
           <h1 className="neon-heading">{displayText}</h1>
           <h2 className="neon-tagline">Season 2</h2>
+          </div>
+          
+          
         </main>
         <div className="content2">
-          <p>powered by</p>
-          <div className="logos">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPREBeb-lgXLfU0u0JhWrWxeF-dnLbZsFzfM77SKvmEXzJQ44o-OqvIfTsx_WHfECZrao&usqp=CAU" alt="" className="logo2" />
-            <img src="https://repository-images.githubusercontent.com/389729275/371ba38b-8a03-4bff-916c-c3fa5396ceda" alt="" className="logo1" />
+   
+          <div className="logo11">
+            <h5>powered by</h5>
+          <img src={gfg} alt="" className="logo1" />
+
           </div>
-          <h3>Hackathon 2024</h3>
+          
+          {/* <h3>Hackathon 2024</h3> */}
           <p>Grand Finale on 27,28, 29 Feb 2024</p>
           <a href="#" className="neonb">Register</a>
         </div>

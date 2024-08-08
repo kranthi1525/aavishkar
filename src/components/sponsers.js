@@ -102,24 +102,24 @@ export default function Sponsors() {
 
         </div>
 
-        <h2>Our Sponsors</h2>
+        <h1>Our Sponsors</h1>
         <div className="sponsor-container">
           <div className="sponsor" data-name="Geeks for Geeks">
             <img src="https://repository-images.githubusercontent.com/389729275/371ba38b-8a03-4bff-916c-c3fa5396ceda" alt="Geeks for Geeks" />
           </div>
-          <div className="sponsor" data-name="AgriCorp">
+          <div className="sponsor" data-name="...">
             <img src="https://avishkaar2024.adityatekkali.edu.in/static/media/logo-small-1-1.ed1aabc80744d972ab2a.png" alt="AgriCorp" />
           </div>
-          <div className="sponsor" data-name="FarmFuture">
+          <div className="sponsor" data-name="...">
             <img src="https://avishkaar2024.adityatekkali.edu.in/static/media/319404445_1324961484944842_7733330898332491332_n.54c5b6822871eb121e25.png" alt="FarmFuture" />
           </div>
-          <div className="sponsor" data-name="EcoHarvest">
+          <div className="sponsor" data-name="...">
             <img src="https://avishkaar2024.adityatekkali.edu.in/static/media/TCSiON_Badge%20(1).ee19556ebd401d52a338.png" alt="EcoHarvest" />
           </div>
-          <div className="sponsor" data-name="SeedInnovate">
+          <div className="sponsor" data-name="....">
             <img src="https://via.placeholder.com/150?text=SeedInnovate" alt="SeedInnovate" />
           </div>
-          <div className="sponsor" data-name="Institutions of innovation councle">
+          <div className="sponsor" data-name="....">
             <img src="https://avishkaar2024.adityatekkali.edu.in/static/media/iiclogo.d9ac219ca1b182b0d299.png" alt="CropBoost" />
           </div>
         </div>

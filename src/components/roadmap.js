@@ -39,7 +39,7 @@ export default function Roadmap() {
 
   const timelineEvents = [
     {
-      date: "01-01-2024",
+      date: "30-09-2024",
       title: "PHASE-1: Problem Statement Submission",
       description: "Avishkaar Season 2 invites early submissions of 1-minute video pitches and abstracts of innovative solutions for problem statements, promising mentorship and theme alignment for your solutions. Click here for guidelines.",
       icon: faVideo,
@@ -47,7 +47,7 @@ export default function Roadmap() {
       typeClass: "timeline__event--type1"
     },
     {
-      date: "15-02-2024",
+      date: "15-10-2024",
       title: "PHASE-2: Evaluation",
       description: "Two-phase evaluation process is designed for fair and insightful assessment, focusing on assessing innovative solutions to determine their quality and potential impact.",
       icon: faClipboardCheck,
@@ -55,7 +55,7 @@ export default function Roadmap() {
       typeClass: "timeline__event--type2"
     },
     {
-      date: "01-04-2024",
+      date: "25-10-2024",
       title: "PHASE-3: Mentorship",
       description: "Mentorship is central to Avishkaar Season 2, with the first 100 participants paired with dedicated mentors from various fields, offering guidance tailored to mentors' participants will be offered suggestions that impact the final assessment to ensure support for innovation.",
       icon: faChalkboardTeacher,
@@ -63,7 +63,7 @@ export default function Roadmap() {
       typeClass: "timeline__event--type3"
     },
     {
-      date: "15-06-2024",
+      date: "05-11-2024",
       title: "PHASE-4: Progress Review",
       description: "Teams adhere to a well-defined presentation format, utilizing review meetings as a platform for clarifications. The feedback and suggestions offered during the third phase are systematically evaluated. Recognizing its pivotal role, progress reviews are deemed essential not only for informed project selection but also for ensuring the overall success of the endeavor.",
       icon: faChartLine,
@@ -71,7 +71,7 @@ export default function Roadmap() {
       typeClass: "timeline__event--type1"
     },
     {
-      date: "01-08-2024",
+      date: "To be declared",
       title: "PHASE-5: Grand Finale",
       description: "The Grand Finale at Aditya Institute of Technology and Management signifies the impressive conclusion of Avishkaar Season 2. During this event, finalist teams present innovative concepts and solutions to a panel of judges and industry experts. Thorough project assessments result in recognizing and rewarding the most outstanding teams with cutting-edge ideas.",
       icon: faTrophy,
@@ -79,7 +79,7 @@ export default function Roadmap() {
       typeClass: "timeline__event--type1"
     },
     {
-      date: "15-09-2024",
+      date: "To be declared ",
       title: "Declarations of Results",
       description: "The official results announcement for Avishkaar Season 2, celebrating the success and innovative achievements of the participants.",
       icon: faCheckCircle,

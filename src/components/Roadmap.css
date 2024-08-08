@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Jost", sans-serif;
   color: var(--light-green);
   background-image: url('https://source.unsplash.com/random/1920x1080?nature');
   background-attachment: fixed;
@@ -100,6 +100,7 @@ h2 {
   width: var(--content-width);
   border-radius: 0 var(--bdrs) var(--bdrs) 0;
   border: 1px solid var(--neon-green);
+  font-family: "Jost", sans-serif;
   transition: all 0.3s ease;
 }
 
@@ -118,6 +119,7 @@ h2 {
   font-size: 1.5rem;
   font-weight: 600;
   background: var(--neon-green);
+  font-family: "Jost", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
